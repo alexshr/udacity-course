@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:solution_04_navigation/category.dart';
+import 'package:solution_04_navigation/category_widget.dart';
 import 'package:solution_04_navigation/unit.dart';
 
 final _backgroundColor = Colors.green[100];
@@ -16,8 +16,8 @@ final _backgroundColor = Colors.green[100];
 ///
 /// While it is named CategoryRoute, a more apt name would be CategoryScreen,
 /// because it is responsible for the UI at the route's destination.
-class CategoryRoute extends StatelessWidget {
-  const CategoryRoute();
+class CategoriesScreen extends StatelessWidget {
+  const CategoriesScreen();
 
   static const _categoryNames = <String>[
     'Length',
@@ -64,10 +64,10 @@ class CategoryRoute extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final categories = <Category>[];
+    final categories = <CategoryWidget>[];
 
     for (var i = 0; i < _categoryNames.length; i++) {
-      categories.add(Category(
+      categories.add(CategoryWidget(
         name: _categoryNames[i],
         color: _baseColors[i],
         iconLocation: Icons.cake,
